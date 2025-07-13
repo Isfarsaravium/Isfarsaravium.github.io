@@ -1,13 +1,30 @@
-/* Primary Theme Color: #007BFF (Vibrant Blue - used sparingly for key elements) */
-/* Darker Blue: #0062cc (Slightly darker for contrast) */
-/* Lighter Blue: #E0F2FF (Very pale blue for subtle accents/borders) */
-/* Main Text Color: #343A40 (Dark gray for readability on light backgrounds) */
-/* Headings: #212121 (Very dark gray/near black for headings) */
-/* Muted Text: #6C757D (Standard muted gray) */
-/* Backgrounds: */
-/* Body Background: #FFFFFF (Pure white) */
-/* Section Backgrounds: #FFFFFF or #F8F9FA (Subtle light gray) */
-/* Card/Item Backgrounds: #FFFFFF */
+/* Color Modification Points: Define the core color palette for easy adjustments */
+/* Primary Background: Deep Dark Gray */
+:root {
+    --color-primary-bg: #1A1A1A;
+    /* Secondary Background: Slightly Lighter Dark Gray for sections */
+    --color-secondary-bg: #212121;
+    /* Card/Element Background: Even Lighter Dark Gray for cards */
+    --color-card-bg: #2A2A2A;
+    /* Electric Blue Accent: Bright Electric Blue */
+    --color-electric-blue: #00C6FF;
+    /* Darker Electric Blue: For gradients/accents */
+    --color-darker-electric-blue: #0072FF;
+    /* Lighter Electric Blue for gradient midpoint */
+    --color-lighter-electric-blue: #00B0FF;
+    /* Light Text: Light Gray for main text */
+    --color-light-text: #E0E0E0;
+    /* Muted Text: Slightly darker light gray */
+    --color-muted-text: #B0B0B0;
+    /* White Text: Pure White for strong contrast */
+    --color-white-text: #FFFFFF;
+    /* Heading Text: Electric Blue for headings */
+    --color-heading-text: #00C6FF;
+    /* Footer Background: Even darker gray */
+    --color-footer-bg: #111111;
+    /* Border color for icons/FAQ */
+    --color-border-dark: #3A3A3A;
+}
 
 /* CRITICAL RESET */
 *, *::before, *::after { /* Added universal box-sizing */
@@ -200,7 +217,7 @@ a:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.2;
-    /* Color Modification Point: Electric blue gradient for the main headline */
+    /* Electric blue gradient: vibrant and subtle */
     background-image: linear-gradient(to right, var(--color-electric-blue), var(--color-lighter-electric-blue), var(--color-darker-electric-blue));
     -webkit-background-clip: text;
     background-clip: text;
