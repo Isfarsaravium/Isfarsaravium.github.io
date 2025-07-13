@@ -1,50 +1,24 @@
-/*
- * Saravium Landing Page Stylesheet
- *
- * This file contains all the CSS for the Saravium landing page,
- * designed with a black and electric blue theme.
- */
+/* Primary Theme Color: #007BFF (Vibrant Blue - used sparingly for key elements) */
+/* Darker Blue: #0062cc (Slightly darker for contrast) */
+/* Lighter Blue: #E0F2FF (Very pale blue for subtle accents/borders) */
+/* Main Text Color: #343A40 (Dark gray for readability on light backgrounds) */
+/* Headings: #212121 (Very dark gray/near black for headings) */
+/* Muted Text: #6C757D (Standard muted gray) */
+/* Backgrounds: */
+/* Body Background: #FFFFFF (Pure white) */
+/* Section Backgrounds: #FFFFFF or #F8F9FA (Subtle light gray) */
+/* Card/Item Backgrounds: #FFFFFF */
 
-/* Color Modification Points: Define the core color palette for easy adjustments */
-/* Primary Background: Deep Dark Gray */
-:root {
-    --color-primary-bg: #1A1A1A;
-    /* Secondary Background: Slightly Lighter Dark Gray for sections */
-    --color-secondary-bg: #212121;
-    /* Card/Element Background: Even Lighter Dark Gray for cards */
-    --color-card-bg: #2A2A2A;
-    /* Electric Blue Accent: Bright Electric Blue */
-    --color-electric-blue: #00C6FF;
-    /* Darker Electric Blue: For gradients/accents */
-    --color-darker-electric-blue: #0072FF;
-    /* Lighter Electric Blue for gradient midpoint */
-    --color-lighter-electric-blue: #00B0FF;
-    /* Light Text: Light Gray for main text */
-    --color-light-text: #E0E0E0;
-    /* Muted Text: Slightly darker light gray */
-    --color-muted-text: #B0B0B0;
-    /* White Text: Pure White for strong contrast */
-    --color-white-text: #FFFFFF;
-    /* Heading Text: Electric Blue for headings */
-    --color-heading-text: #00C6FF;
-    /* Footer Background: Even darker gray */
-    --color-footer-bg: #111111;
-    /* Border color for icons/FAQ */
-    --color-border-dark: #3A3A3A;
-}
-
-
-/* CRITICAL RESET: Ensures consistent box-sizing across all elements */
-*, *::before, *::after {
+/* CRITICAL RESET */
+*, *::before, *::after { /* Added universal box-sizing */
     box-sizing: border-box;
 }
 
-/* Global HTML and Body Styles */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* Prevents horizontal scrollbar */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 body {
@@ -53,15 +27,11 @@ body {
     line-height: 1.6;
     background-color: var(--color-primary-bg); /* Overall page background */
 }
-
-/* Container for consistent content width and centering */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Horizontal padding only */
+    padding: 0 20px; /* Keep horizontal padding only */
 }
-
-/* Heading Styles: Apply Montserrat font and specific colors */
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
     color: var(--color-white-text); /* White for main headings */
@@ -356,17 +326,19 @@ a:hover {
     color: var(--color-heading-text); /* Electric Blue for heading */
 }
 .calendly-embed-placeholder {
-    border: 2px dashed var(--color-electric-blue); /* Electric Blue dashed border */
-    padding: 50px;
-    min-height: 400px;
+    /* Removed border and padding to eliminate the gray box */
+    /* Removed background-color as well */
+    min-height: 400px; /* Still a minimum height for the placeholder text */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2em;
     color: var(--color-muted-text); /* Muted light gray for placeholder text */
-    background-color: var(--color-card-bg); /* Card background color for placeholder */
+    background-color: transparent; /* Ensure no background color */
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Stronger shadow */
+    max-width: 800px; /* Keep max-width to center it */
+    margin: 0 auto; /* Center the block */
+    box-shadow: none; /* Removed shadow */
 }
 
 /* Our Members Section Styling */
@@ -404,13 +376,14 @@ a:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Stronger shadow for dark theme */
     padding: 25px;
     text-align: center;
-    width: calc(33.33% - 20px);
+    width: calc(33.33% - 20px); /* Adjusted width to fit 3 items with 30px gap (2*30/3 = 20) */
     min-width: 200px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
+    cursor: pointer; /* Indicate it's clickable/hoverable */
 }
 .member-card:hover {
     transform: translateY(-5px);
@@ -442,6 +415,27 @@ a:hover {
 .member-card.animate-on-scroll {
     transition-delay: var(--delay);
 }
+
+/* New styles for extended member details */
+.member-details-extended {
+    max-height: 0; /* Hidden by default */
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    width: 100%; /* Take full width of the card */
+    text-align: left;
+    margin-top: 15px; /* Space from previous content */
+    padding-top: 15px; /* Padding for content inside */
+    border-top: 1px solid var(--color-border-dark); /* Subtle separator */
+    color: var(--color-muted-text); /* Muted text color for details */
+    font-size: 0.9em;
+}
+
+.member-card:hover .member-details-extended {
+    max-height: 200px; /* Sufficient height to show content without scroll */
+    opacity: 1;
+}
+
 
 /* Our Work Section Styling */
 .our-work-section {
