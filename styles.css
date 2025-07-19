@@ -1,33 +1,21 @@
 /* Color Modification Points: Define the core color palette for easy adjustments */
-/* Primary Background: Deep Dark Gray */
 :root {
     --color-primary-bg: #1A1A1A;
-    /* Secondary Background: Slightly Lighter Dark Gray for sections */
     --color-secondary-bg: #212121;
-    /* Card/Element Background: Even Lighter Dark Gray for cards */
     --color-card-bg: #2A2A2A;
-    /* Electric Blue Accent: Bright Electric Blue */
     --color-electric-blue: #00C6FF;
-    /* Darker Electric Blue: For gradients/accents */
     --color-darker-electric-blue: #0072FF;
-    /* Lighter Electric Blue for gradient midpoint */
     --color-lighter-electric-blue: #00B0FF;
-    /* Light Text: Light Gray for main text */
     --color-light-text: #E0E0E0;
-    /* Muted Text: Slightly darker light gray */
     --color-muted-text: #B0B0B0;
-    /* White Text: Pure White for strong contrast */
     --color-white-text: #FFFFFF;
-    /* Heading Text: Electric Blue for headings */
     --color-heading-text: #00C6FF;
-    /* Footer Background: Even darker gray */
     --color-footer-bg: #111111;
-    /* Border color for icons/FAQ */
     --color-border-dark: #3A3A3A;
 }
 
 /* CRITICAL RESET */
-*, *::before, *::after { /* Added universal box-sizing */
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -35,47 +23,42 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: var(--color-light-text); /* Main text color */
+    color: var(--color-light-text);
     line-height: 1.6;
-    background-color: var(--color-primary-bg); /* Overall page background */
+    background-color: var(--color-primary-bg);
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Keep horizontal padding only */
+    padding: 0 20px; /* Added back horizontal padding for content within containers */
 }
-h1, h2 {
+
+h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--color-white-text); /* White for main headings */
     margin: 0;
     padding: 0;
+    color: var(--color-white-text); /* Default heading color */
 }
+
 h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--color-heading-text); /* Electric Blue for section titles */
-    margin: 0;
-    padding: 0;
-}
-h4 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--color-white-text); /* White for H4 on dark cards */
-    margin: 0;
-    padding: 0;
+    color: var(--color-heading-text); /* Specific color for h3 headings */
 }
 
 /* Link Styles */
 a {
-    color: var(--color-electric-blue); /* Electric Blue for links */
+    color: var(--color-electric-blue);
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 a:hover {
-    color: var(--color-darker-electric-blue); /* Darker Electric Blue on hover */
+    color: var(--color-darker-electric-blue);
 }
 
 /* Header Wrapper: Sticky header container */
@@ -83,9 +66,9 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: var(--color-secondary-bg); /* Slightly lighter dark gray */
-    padding: 10px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Stronger shadow for dark theme */
+    background-color: var(--color-primary-bg);
+    padding: 2px 0; /* Thinner header */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     border-radius: 0;
     width: 100%;
 }
@@ -94,20 +77,20 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Matches container width */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Matches container padding */
+    padding: 0 20px; /* Consistent padding for header content */
 }
 
 /* Header Logo Styling */
 .header-logo img {
-    height: 35px;
-    /* Removed filter: invert(1) brightness(1.5); to prevent yellowish tint */
+    height: 105px;
+    width: auto;
 }
 
 /* Main Header Navigation: Button-like element */
 .main-header-nav {
-    background-image: linear-gradient(to right, var(--color-electric-blue), var(--color-darker-electric-blue)); /* Bright electric blue gradient */
+    background-image: linear-gradient(to right, var(--color-electric-blue), var(--color-darker-electric-blue));
     padding: 8px 25px;
     border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -125,16 +108,19 @@ a:hover {
     display: flex;
     gap: 25px;
 }
+
 .main-nav ul li a {
-    color: var(--color-white-text); /* White text for contrast on gradient button */
+    color: var(--color-white-text);
     font-weight: bold;
     font-size: 1em;
     padding: 2px 0;
     position: relative;
 }
+
 .main-nav ul li a:hover {
-    color: #F0F0F0; /* Lighter white on hover */
+    color: #F0F0F0;
 }
+
 .main-nav ul li a::after {
     content: '';
     position: absolute;
@@ -142,13 +128,13 @@ a:hover {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: var(--color-white-text); /* White underline for contrast */
+    background-color: var(--color-white-text);
     transition: width 0.3s ease;
 }
+
 .main-nav ul li a:hover::after {
     width: 100%;
 }
-
 
 /* ANIMATION KEYFRAMES */
 @keyframes fadeInUp {
@@ -161,6 +147,7 @@ a:hover {
         transform: translateY(0);
     }
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -177,35 +164,39 @@ a:hover {
     transform: translateY(15px);
     transition: opacity 0.5s cubic-bezier(0.2, 0.8, 0.4, 1), transform 0.5s cubic-bezier(0.2, 0.8, 0.4, 1);
 }
+
 .animate-on-load.is-visible,
 .animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
+
 .hero-section h1 {
     animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
 }
+
 .hero-section h2 {
     animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.4, 1) 0.1s forwards;
 }
+
 .vsl-section p {
     margin-top: 0;
     font-style: italic;
-    color: var(--color-muted-text); /* Muted light gray for italic text */
+    color: var(--color-muted-text);
     padding-bottom: 20px;
     animation: fadeIn 0.8s cubic-bezier(0.2, 0.8, 0.4, 1) 0.3s forwards;
 }
 
-
 /* Hero Section Styling */
 .hero-section {
     text-align: center;
-    padding: 0;
+    padding: 0 20px; /* Added horizontal padding */
     background-color: transparent;
     border-bottom: none;
     margin-top: 0;
-    padding-top: calc(35px + 10px + 15px); /* Logo height + wrapper padding + some space */
+    padding-top: calc(35px + 10px + 15px); /* Adjusted top padding */
 }
+
 .hero-section h1 {
     font-size: 3.2em;
     margin-bottom: 10px;
@@ -217,13 +208,13 @@ a:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.2;
-    /* Electric blue gradient: vibrant and subtle */
     background-image: linear-gradient(to right, var(--color-electric-blue), var(--color-lighter-electric-blue), var(--color-darker-electric-blue));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent; /* Fallback */
+    color: transparent;
 }
+
 .hero-section h2 {
     font-size: 1.8em;
     margin-top: 0;
@@ -233,22 +224,23 @@ a:hover {
     margin-right: auto;
     opacity: 0;
     line-height: 1.4;
-    color: var(--color-white-text); /* White for sub-headline */
+    color: var(--color-white-text);
 }
 
 /* VSL Section Styling */
 .vsl-section {
-    padding: 0 20px;
+    padding: 0 20px; /* Added horizontal padding */
     text-align: center;
     background-color: transparent;
     margin-top: 0;
 }
+
 .vsl-section iframe {
     width: 100%;
     max-width: 1100px;
     height: 618px;
     border: none;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Stronger shadow for dark theme */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     border-radius: 10px;
     opacity: 0;
 }
@@ -256,13 +248,14 @@ a:hover {
 /* Call to Action Button Styling */
 .cta-button-container {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 20px; /* Added horizontal padding */
     background-color: transparent;
     margin-top: -20px;
 }
+
 .cta-button {
     display: inline-block;
-    background-image: linear-gradient(to right, var(--color-electric-blue), var(--color-darker-electric-blue)); /* Electric Blue gradient for CTA */
+    background-image: linear-gradient(to right, var(--color-electric-blue), var(--color-darker-electric-blue));
     color: var(--color-white-text);
     padding: 16px 30px;
     font-size: 1.2em;
@@ -272,25 +265,28 @@ a:hover {
     transition: background-color 0.1s ease, transform 0.08s ease, box-shadow 0.1s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Stronger shadow for dark theme */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
 .cta-button:hover {
-    background-image: linear-gradient(to right, var(--color-darker-electric-blue), var(--color-electric-blue)); /* Reversed gradient on hover */
+    background-image: linear-gradient(to right, var(--color-darker-electric-blue), var(--color-electric-blue));
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* Stronger shadow on hover */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 /* How We Work Section Styling */
 .how-we-work-section {
-    background-color: var(--color-secondary-bg); /* Secondary dark background */
-    padding: 80px 20px;
+    background-color: var(--color-secondary-bg);
+    padding: 80px 20px; /* Added horizontal padding */
     text-align: center;
 }
+
 .how-we-work-section h3 {
     font-size: 2.2em;
     margin-bottom: 50px;
-    color: var(--color-heading-text); /* Electric Blue for heading */
+    color: var(--color-heading-text);
 }
+
 .how-we-work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -298,22 +294,26 @@ a:hover {
     max-width: 1000px;
     margin: 0 auto;
 }
+
 .grid-item {
-    background-color: var(--color-card-bg); /* Card background color */
-    color: var(--color-light-text); /* Light text for grid items */
+    background-color: var(--color-card-bg);
+    color: var(--color-light-text);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* Stronger shadow for dark theme */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     text-align: left;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
+
 .grid-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Stronger shadow on hover */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
+
 .grid-item.animate-on-scroll {
     transition-delay: var(--delay);
 }
+
 .grid-item img {
     width: 80px;
     height: 80px;
@@ -322,53 +322,52 @@ a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* Removed filter: invert(1) brightness(1.5); to prevent yellowish tint */
-    /* Removed border: 1px solid var(--color-border-dark); to remove the box around the icon */
     padding: 5px;
     border-radius: 5px;
     max-width: 100%;
     height: auto;
 }
 
-
 /* Calendly Integration Section Styling */
 .calendly-section {
-    padding: 80px 20px;
+    padding: 80px 20px; /* Added horizontal padding */
     text-align: center;
-    background-color: var(--color-primary-bg); /* Primary dark background */
+    background-color: var(--color-primary-bg);
 }
+
 .calendly-section h3 {
     font-size: 2.2em;
     margin-bottom: 30px;
-    color: var(--color-heading-text); /* Electric Blue for heading */
+    color: var(--color-heading-text);
 }
+
 .calendly-embed-placeholder {
-    /* Removed border and padding to eliminate the gray box */
-    /* Removed background-color as well */
-    min-height: 400px; /* Still a minimum height for the placeholder text */
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2em;
-    color: var(--color-muted-text); /* Muted light gray for placeholder text */
-    background-color: transparent; /* Ensure no background color */
+    color: var(--color-muted-text);
+    background-color: transparent;
     border-radius: 8px;
-    max-width: 800px; /* Keep max-width to center it */
-    margin: 0 auto; /* Center the block */
-    box-shadow: none; /* Removed shadow */
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: none;
 }
 
 /* Our Members Section Styling */
 .our-members-section {
-    background-color: var(--color-secondary-bg); /* Secondary dark background */
-    padding: 80px 20px;
+    background-color: var(--color-secondary-bg);
+    padding: 80px 20px; /* Added horizontal padding */
     text-align: center;
 }
+
 .our-members-section h3 {
     font-size: 2.2em;
     margin-bottom: 50px;
-    color: var(--color-heading-text); /* Electric Blue for heading */
+    color: var(--color-heading-text);
 }
+
 .members-grid {
     display: flex;
     justify-content: center;
@@ -381,70 +380,76 @@ a:hover {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
 }
+
 /* Hide scrollbar for Webkit browsers */
 .members-grid::-webkit-scrollbar {
     display: none;
 }
 
 .member-card {
-    background-color: var(--color-card-bg); /* Card background color */
-    color: var(--color-light-text); /* Light text for member cards */
+    background-color: var(--color-card-bg);
+    color: var(--color-light-text);
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Stronger shadow for dark theme */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     padding: 25px;
     text-align: center;
-    width: calc(33.33% - 20px); /* Adjusted width to fit 3 items with 30px gap (2*30/3 = 20) */
+    width: calc(33.33% - 20px); /* Adjusted width to account for gap */
     min-width: 200px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
-    cursor: pointer; /* Indicate it's clickable/hoverable */
+    cursor: pointer;
 }
+
 .member-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* Stronger shadow on hover */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
+
 .member-card img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 4px solid var(--color-electric-blue); /* Electric Blue border */
+    border: 4px solid var(--color-electric-blue);
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    filter: none; /* Ensure no grayscale on team photos */
+    filter: none;
     max-width: 100%;
     height: auto;
 }
+
 .member-card p {
     font-size: 1em;
-    color: var(--color-muted-text); /* Muted light gray for member card text */
+    color: var(--color-muted-text);
     margin: 0;
 }
+
 .member-card h4 {
-    color: var(--color-white-text); /* White for name */
+    color: var(--color-white-text);
     margin-top: 10px;
     margin-bottom: 5px;
     font-size: 1.3em;
 }
+
 .member-card.animate-on-scroll {
     transition-delay: var(--delay);
 }
 
-/* New styles for extended member details */
+/* New styles for extended member details - ONLY THIS CARD'S DETAILS EXPAND ON HOVER */
 .member-details-extended {
-    max-height: 0; /* Hidden by default */
+    max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-    width: 100%; /* Take full width of the card */
+    width: 100%;
     text-align: left;
-    margin-top: 15px; /* Space from previous content */
-    padding-top: 15px; /* Padding for content inside */
-    border-top: 1px solid var(--color-border-dark); /* Subtle separator */
-    color: var(--color-muted-text); /* Muted text color for details */
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--color-border-dark);
+    color: var(--color-muted-text);
     font-size: 0.9em;
 }
 
@@ -453,18 +458,19 @@ a:hover {
     opacity: 1;
 }
 
-
 /* Our Work Section Styling */
 .our-work-section {
-    padding: 80px 20px;
+    padding: 80px 20px; /* Added horizontal padding */
     text-align: center;
-    background-color: var(--color-primary-bg); /* Primary dark background */
+    background-color: var(--color-primary-bg);
 }
+
 .our-work-section h3 {
     font-size: 2.2em;
     margin-bottom: 50px;
-    color: var(--color-heading-text); /* Electric Blue for heading */
+    color: var(--color-heading-text);
 }
+
 .work-grid {
     display: flex;
     flex-wrap: nowrap;
@@ -473,35 +479,39 @@ a:hover {
     overflow-x: hidden;
     padding-bottom: 0;
 }
+
 .work-item {
-    background-color: var(--color-card-bg); /* Card background color */
-    color: var(--color-light-text); /* Light text for work items */
+    background-color: var(--color-card-bg);
+    color: var(--color-light-text);
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Stronger shadow for dark theme */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     padding: 20px;
     text-align: center;
-    width: 267.5px;
+    width: 267.5px; /* Fixed width for consistency */
     flex-shrink: 0;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
+
 .work-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* Stronger shadow on hover */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
+
 .work-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 20px;
-    border: 1px solid var(--color-electric-blue); /* Electric Blue border */
-    filter: none; /* Ensure no grayscale on work samples */
+    border: 1px solid var(--color-electric-blue);
+    filter: none;
     max-width: 100%;
     height: auto;
 }
+
 .work-item .view-button {
     display: inline-block;
-    background-image: linear-gradient(to right, var(--color-electric-blue), var(--color-darker-electric-blue)); /* Electric Blue gradient for button */
+    background-image: linear-gradient(to right, var(--color-electric-blue), var(--color-darker-electric-blue));
     color: var(--color-white-text);
     padding: 12px 25px;
     font-size: 1.1em;
@@ -512,24 +522,28 @@ a:hover {
     border: none;
     cursor: pointer;
 }
+
 .work-item .view-button:hover {
-    background-image: linear-gradient(to right, var(--color-darker-electric-blue), var(--color-electric-blue)); /* Reversed gradient on hover */
+    background-image: linear-gradient(to right, var(--color-darker-electric-blue), var(--color-electric-blue));
 }
+
 .work-item.animate-on-scroll {
     transition-delay: var(--delay);
 }
 
 /* How We Use AI Section Styling */
 .how-we-use-ai-section {
-    background-color: var(--color-secondary-bg); /* Secondary dark background */
-    padding: 80px 20px;
+    background-color: var(--color-secondary-bg);
+    padding: 80px 20px; /* Added horizontal padding */
     text-align: center;
 }
+
 .how-we-use-ai-section h3 {
     font-size: 2.2em;
     margin-bottom: 50px;
-    color: var(--color-heading-text); /* Electric Blue for heading */
+    color: var(--color-heading-text);
 }
+
 .ai-content-wrapper {
     display: flex;
     flex-direction: row;
@@ -539,31 +553,36 @@ a:hover {
     margin: 0 auto;
     text-align: left;
 }
+
 .ai-text-content {
     flex: 1;
     color: var(--color-light-text);
 }
+
 .ai-text-content h4 {
-    color: var(--color-light-text); /* Light gray for sub-heading */
+    color: var(--color-white-text); /* Changed to white for better contrast */
     font-size: 1.5em;
     margin-bottom: 15px;
 }
+
 .ai-text-content p {
     margin-bottom: 15px;
     line-height: 1.8;
 }
+
 .ai-image-container {
     flex-shrink: 0;
     width: 45%;
     max-width: 500px;
     position: relative;
-    padding-bottom: 25.35%;
+    padding-bottom: 25.35%; /* Aspect ratio for responsive iframes (16:9 for videos) */
     height: 0;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Stronger shadow for dark theme */
-    border: 2px solid var(--color-electric-blue); /* Electric blue border */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    border: 2px solid var(--color-electric-blue);
 }
+
 .ai-image-container iframe {
     position: absolute;
     top: 0;
@@ -574,56 +593,62 @@ a:hover {
     border-radius: 10px;
 }
 
-
 /* Footer Styling */
 .footer {
-    background-color: var(--color-footer-bg); /* Even darker gray for footer */
-    color: var(--color-light-text); /* Light gray for footer text */
-    padding: 40px 20px;
+    background-color: var(--color-footer-bg);
+    color: var(--color-light-text);
+    padding: 40px 20px; /* Added horizontal padding */
     text-align: center;
     font-size: 0.9em;
 }
+
 .footer p {
     margin: 5px 0;
 }
+
 .footer a {
-    color: var(--color-electric-blue); /* Electric Blue for footer links */
+    color: var(--color-electric-blue);
     text-decoration: none;
 }
+
 .footer a:hover {
     text-decoration: underline;
-    color: var(--color-white-text); /* Pure white on hover for strong contrast */
+    color: var(--color-white-text);
 }
+
 .social-links {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 15px;
 }
+
 .social-links a img {
     height: 28px;
     width: 28px;
-    /* Removed filter: invert(1) brightness(1.5); to prevent yellowish tint */
     transition: filter 0.3s ease;
 }
+
 .social-links a:hover img {
-    filter: invert(1) brightness(2); /* Even brighter on hover */
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Changes icon to white on hover */
 }
 
 /* FAQ Section Specific Styles */
 .faq-section {
-    background-color: var(--color-primary-bg); /* Primary dark background */
-    padding: 80px 20px;
+    background-color: var(--color-primary-bg);
+    padding: 80px 20px; /* Added horizontal padding */
     text-align: center;
 }
+
 .faq-section h3 {
     font-size: 2.2em;
     margin-bottom: 30px;
-    color: var(--color-heading-text); /* Electric Blue for heading */
+    color: var(--color-heading-text);
 }
+
 .faq-item {
-    background-color: var(--color-card-bg); /* Card background color for FAQ items */
-    border: 1px solid var(--color-border-dark); /* Darker gray border */
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border-dark);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
@@ -631,8 +656,9 @@ a:hover {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Stronger shadow */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
+
 /* New wrapper for answer content */
 .faq-answer-content {
     max-height: 0;
@@ -640,16 +666,18 @@ a:hover {
     transition: max-height 0.3s ease-out, padding-top 0.3s ease-out, border-top 0.3s ease-out;
     padding-top: 0;
     border-top: none;
-    color: var(--color-light-text); /* Light text for answer content */
+    color: var(--color-light-text);
 }
+
 /* Active state for answer content - OPEN */
 .faq-answer-content.active {
     padding-top: 10px;
-    border-top: 1px solid var(--color-border-dark); /* Darker border for dark theme */
+    border-top: 1px solid var(--color-border-dark);
     /* max-height will be set by JS dynamically to scrollHeight, then 'auto' */
 }
+
 .faq-item h4 {
-    color: var(--color-white-text); /* White for interactive question titles */
+    color: var(--color-white-text);
     margin-bottom: 0;
     cursor: pointer;
     display: flex;
@@ -658,28 +686,32 @@ a:hover {
     font-size: 1.2em;
     padding-bottom: 10px;
 }
+
 .faq-item h4::after {
     content: '+';
     font-size: 1.2em;
     transition: transform 0.3s ease;
-    color: var(--color-light-text); /* Light gray for +/- icon */
+    color: var(--color-light-text);
 }
+
 .faq-item h4.active::after {
     content: '-';
     transform: rotate(180deg);
 }
+
 .faq-answer-content ul {
     margin-top: 10px;
     padding-left: 20px;
-    color: var(--color-light-text); /* Light text for list items */
+    color: var(--color-light-text);
 }
+
 .faq-answer-content ul li {
     margin-bottom: 5px;
 }
-.faq-answer-content strong {
-    color: var(--color-white-text); /* White for bold text in answers */
-}
 
+.faq-answer-content strong {
+    color: var(--color-white-text);
+}
 
 /* Responsive Design Adjustments */
 @media (max-width: 1200px) {
@@ -695,20 +727,21 @@ a:hover {
         height: 500px;
     }
 }
+
 @media (max-width: 768px) {
     .top-section-content {
-        flex-direction: column; /* Stack logo and nav vertically */
-        align-items: flex-start; /* Align stacked items to the left */
-        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px; /* Adjusted padding for mobile */
     }
     .header-logo {
-        margin-bottom: 15px; /* Add space below logo when stacked */
+        margin-bottom: 15px;
     }
     .main-header-nav {
-        width: 100%; /* Make nav full width when stacked */
-        border-radius: 10px; /* Adjust border-radius for mobile */
-        height: auto; /* Allow height to adjust for stacked nav links */
-        padding: 15px 20px; /* Adjust padding for stacked nav */
+        width: 100%;
+        border-radius: 10px;
+        height: auto;
+        padding: 15px 20px;
     }
     .main-nav ul {
         flex-direction: column;
@@ -737,45 +770,44 @@ a:hover {
         font-size: 1em;
     }
     .cta-button-container {
-        padding: 20px 20px 0;
+        padding: 20px 20px 0; /* Adjusted padding for mobile */
     }
     .how-we-work-section, .calendly-section, .our-members-section, .our-work-section, .faq-section, .how-we-use-ai-section {
-        padding: 40px 15px; /* Adjust padding for mobile */
+        padding: 40px 20px; /* Adjusted padding for mobile */
     }
     .work-grid {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px; /* Slightly smaller gap on mobile */
+        gap: 20px;
     }
     .work-item {
-        width: calc(50% - 10px); /* Two columns with small gap */
+        width: calc(50% - 10px);
         min-width: 150px;
     }
     .members-grid {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px; /* Slightly smaller gap on mobile */
+        gap: 20px;
         overflow-x: hidden;
     }
     .member-card {
-        width: calc(50% - 10px); /* Two columns with small gap */
+        width: calc(50% - 10px);
         min-width: 150px;
     }
-
     .ai-content-wrapper {
-        flex-direction: column; /* Stack content vertically on mobile */
+        flex-direction: column;
         text-align: center;
     }
-
     .ai-image-container {
-        width: 100%; /* Full width for image on mobile */
+        width: 100%;
         margin-top: 20px;
-        padding-bottom: 56.25%; /* Standard 16:9 for mobile */
+        padding-bottom: 56.25%;
     }
 }
+
 @media (max-width: 480px) {
     .work-item,
     .member-card {
-        width: 100%; /* Single column on very small screens */
+        width: 100%;
     }
 }
