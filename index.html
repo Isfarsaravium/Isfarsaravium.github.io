@@ -1,251 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Favicon -->
+    <link rel="icon" href="/Images/favicon.ico" type="image/icon">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saravium</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Montserrat and Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="top-section-wrapper"> <div class="top-section-content">
+    <!-- Header Section: Contains logo and navigation -->
+    <div class="top-section-wrapper">
+        <div class="top-section-content">
             <div class="header-logo">
+                <!-- Placeholder logo image. Replace '/Images/ARARVIUM-removebg-preview.png' with your actual transparent logo URL -->
                 <img src="/Images/Saravium website logo v3.png" alt="Saravium Logo">
             </div>
-            <nav class="main-header-nav"> <ul class="main-nav">
-                    <li><a href="#heroSection">Home</a></li>
-                    <li><a href="#calendlySection">Book a Call</a></li>
-                    <li><a href="#ourMembersSection">Our Team</a></li>
-                    <li><a href="#ourWorkSection">Our Work</a></li>
-                </ul>
-            </nav>
+            <header class="main-header-nav">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#heroSection">Home</a></li>
+                        <li><a href="#calendlySection">Book a Call</a></li>
+                        <li><a href="#ourMembersSection">Our Team</a></li>
+                        <li><a href="#ourWorkSection">Our Work</a></li>
+                        <!-- 'How We Use AI' and 'FAQ' links removed from header navigation as per request -->
+                    </ul>
+                </nav>
+            </header>
         </div>
-    </header>
+    </div>
 
-    <main>
-        <section class="hero-section" id="heroSection">
-            <div class="container">
-                <h1 class="animate-on-load">Scale the Future With Saravium</h1>
-                <h2 class="animate-on-load">Acquire 45 AI Clients in the Next 90 Days</h2>
+    <!-- Hero Section: Main headline and sub-headline -->
+    <section class="hero-section" id="heroSection">
+        <div class="container">
+            <h1 class="animate-on-load">Scale the Future With Saravium</h1>
+            <h2 class="animate-on-load">Acquire 45 AI Clients in the Next 90 Days</h2>
+        </div>
+    </section>
+
+    <!-- Video Sales Letter (VSL) Section -->
+    <section class="vsl-section">
+        <div class="container">
+            <!-- VSL YouTube iframe. Replace 'https://www.youtube.com/embed/dQw4w9WgXcQ' with your actual VSL YouTube embed URL -->
+            <iframe class="animate-on-load" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- The style for this paragraph is now in styles.css -->
+            <p>Don't worry, it wont be a Sales Call. We won't close you with anything.</p>
+        </div>
+    </section>
+
+    <!-- Call to Action (CTA) Button Section -->
+    <section class="cta-button-container">
+        <div class="container">
+            <a href="#calendlySection" class="cta-button">Book a Free Strategy Call</a>
+            <!-- The style for this paragraph is now in styles.css -->
+            <p>Let's discuss how we can grow your client base.</p>
+        </div>
+    </section>
+
+    <!-- How We Work Section: Grid of services -->
+    <section class="how-we-work-section">
+        <div class="container">
+            <h3 class="animate-on-scroll">How We Get You Clients</h3>
+            <div class="how-we-work-grid">
+                <div class="grid-item animate-on-scroll" data-delay="0s">
+                    <!-- Placeholder icon image. Update URL to your actual icon. -->
+                    <img src="/Images/mail blue.png" alt="Email Marketing Icon">
+                    <h4>Email Marketing</h4>
+                    <p>This is the best method for gaining clients. It has the most ROI in markeitng history. Also helps to build a deeper connection with the audience and gain insigt about your niche</p>
+                </div>
+                <div class="grid-item animate-on-scroll" data-delay="0.1s">
+                    <!-- Placeholder icon image. Update URL to your actual icon. -->
+                    <img src="/Images/funnel.png" alt="Funnels Icon">
+                    <h4>Automated Client Funnels</h4>
+                    <p>Complete and automated funnels to getting your reach and traffic into paying clients. Most common funnel types are lead magnet to email marketing.</p>
+                </div>
+                <div class="grid-item animate-on-scroll" data-delay="0.2s">
+                    <!-- Placeholder icon image. Update URL to your actual icon. -->
+                    <img src="/Images/youtube.png" alt="YouTube Icon">
+                    <h4>Scripts</h4>
+                    <p>We write Youtube Scripts, Reels Scripts to increase your reach to your targetted audience. And then getting them on the funnels.</p>
+                </div>
+                <div class="grid-item animate-on-scroll" data-delay="0.3s">
+                    <!-- Placeholder icon image. Update URL to your actual icon. -->
+                    <img src="/Images/magnet.png" alt="Lead Magnet Icon">
+                    <h4>Lead Magnets</h4>
+                    <p>Lead Magnets which are natively embedded on your videos that get your traffic into our funnels immeadiately.</p>
+                </div>
+                <div class="grid-item animate-on-scroll" data-delay="0.4s">
+                    <!-- Placeholder icon image. Update URL to your actual icon. -->
+                    <img src="/Images/portal.png" alt="Client Portal Icon">
+                    <h4>Client Portals</h4>
+                    <p>We make Skool like platforms where you will be able to teach your clients, fully customized to your needs. If you don't think skool.com or other 3rd software is effective.</p>
+                </div>
+                <div class="grid-item animate-on-scroll" data-delay="0.5s">
+                    <!-- Placeholder icon image. Update URL to your actual icon. -->
+                    <img src="/Images/tools.png" alt="Team Tools Icon">
+                    <h4>Team Tool Integration</h4>
+                    <p>Managing a lot of clients can be hard, we provide consulting to managing your team using many helpfull resources and tools.</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="vsl-section">
-            <div class="container">
-                <iframe class="animate-on-load" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p style="font-style: italic; color: #B0B0B0; padding-bottom: 20px;">(Placeholder Video: Replace with your actual VSL link)</p>
+    <!-- Calendly Integration Section -->
+    <section class="calendly-section" id="calendlySection">
+        <div class="container">
+            <h3 class="animate-on-scroll">Schedule Your Free Strategy Session</h3>
+            <p class="animate-on-scroll">Find a time that works for you. Let's discuss your goals and how Saravium can help.</p>
+            <!-- The style for this div is now in styles.css -->
+            <div class="calendly-embed-placeholder animate-on-scroll" data-delay="0.2s">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/isfar-saravium/30min?background_color=000000&text_color=ffffff" style="min-width:320px;height:1000px;width:100%;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
             </div>
-        </section>
-
-        <section class="cta-button-container">
-            <div class="container">
-                <a href="#calendlySection" class="cta-button">Book a Free Strategy Call</a>
-                <p style="margin-top: 15px; font-size: 1.1em; color: #E0E0E0;">Let's discuss how we can grow your client base.</p>
+        </div>
+    </section>
+    
+    <!-- Our Members Section: Team member cards -->
+    <section class="our-members-section" id="ourMembersSection">
+        <div class="container">
+            <h3 class="animate-on-scroll">Meet The Saravium Team</h3>
+            <div class="members-grid">
+                <div class="member-card animate-on-scroll" data-delay="0s">
+                    <!-- Placeholder image for team member. Update URL to actual photo. -->
+                    <img src="/Images/isfar zoomed in number 2.png" alt="Isfar - CEO, Copywriter">
+                    <h4>Isfar</h4>
+                    <p>Email Marketing, Copywriter and Funnel Builder</p>
+                </div>
+                
+                <div class="member-card animate-on-scroll" data-delay="0.2s">
+                    <!-- Placeholder image for team member. Update URL to actual photo. -->
+                    <img src="/Images/rafi zoomed in.png" alt="Rafi - JavaScript">
+                    <h4>Rafi</h4>
+                    <p>Developer and Designer</p>
+                </div>
+                <div class="member-card animate-on-scroll" data-delay="0.3s">
+                    <!-- Placeholder image for team member. Update URL to actual photo. -->
+                    <img src="/Images/mihran wedding picture" alt="Mihran - Prospecting">
+                    <h4>Mihran</h4>
+                    <p>Scriptwriter and Prospector</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="how-we-work-section">
-            <div class="container">
-                <h3 class="animate-on-scroll">How We Empower Your Growth</h3>
-                <div class="how-we-work-grid">
-                    <div class="grid-item animate-on-scroll" data-delay="0s">
-                        <img src="/Images/mail blue.png" alt="Email Marketing Icon">
-                        <h4>Email Marketing</h4>
-                        <p>Craft high-converting email sequences and newsletters that engage your audience and drive consistent client acquisition.</p>
+    <!-- Our Work Section: Miro board examples -->
+    <section class="our-work-section" id="ourWorkSection">
+        <div class="container">
+            <h3 class="animate-on-scroll">See Our Work in Action</h3>
+            <p class="animate-on-scroll">Explore personalized value examples and proven strategies on our Miro Boards.</p>
+            <div class="work-grid">
+                <div class="work-item animate-on-scroll" data-delay="0s">
+                    <!-- Placeholder image for work example. Update URL to actual image. -->
+                    <img src="https://placehold.co/300x200/2A2A2A/00C6FF?text=Email+Examples" alt="Email Marketing Work">
+                    <h4>High-Converting Email Sequences</h4>
+                    <!-- Miro board URL. Replace 'https://miro.com/app/board/YOUR_EMAIL_BOARD_LINK' with your actual Miro board link. -->
+                    <a href="https://miro.com/app/board/YOUR_EMAIL_BOARD_LINK" target="_blank" class="view-button">View Board</a>
+                </div>
+                <div class="work-item animate-on-scroll" data-delay="0.1s">
+                    <!-- Placeholder image for work example. Update URL to actual image. -->
+                    <img src="https://placehold.co/300x200/2A2A2A/00C6FF?text=Landing+Page+Designs" alt="Landing Page Designs">
+                    <h4>Engaging Landing Page Designs</h4>
+                    <!-- Miro board URL. Replace 'https://miro.com/app/board/YOUR_LANDING_PAGE_BOARD_LINK' with your actual Miro board link. -->
+                    <a href="https://miro.com/app/board/YOUR_LANDING_PAGE_BOARD" target="_blank" class="view-button">View Board</a>
+                </div>
+                <div class="work-item animate-on-scroll" data-delay="0.2s">
+                    <!-- Placeholder image for work example. Update URL to actual image. -->
+                    <img src="https://placehold.co/300x200/2A2A2A/00C6FF?text=YouTube+Scripts" alt="YouTube Script Work">
+                    <h4>Authority-Building YouTube Scripts</h4>
+                    <!-- Miro board URL. Replace 'https://miro.com/app/board/YOUR_YOUTUBE_BOARD_LINK' with your actual Miro board link. -->
+                    <a href="https://miro.com/app/board/YOUR_YOUTUBE_BOARD_LINK" target="_blank" class="view-button">View Board</a>
+                </div>
+                <div class="work-item animate-on-scroll" data-delay="0.3s">
+                    <!-- Placeholder image for work example. Update URL to actual image. -->
+                    <img src="https://placehold.co/300x200/2A2A2A/00C6FF?text=Lead+Magnet+Samples" alt="Lead Magnet Samples">
+                    <h4>Irresistible Lead Magnet Examples</h4>
+                    <!-- Miro board URL. Replace 'https://miro.com/app/board/YOUR_LEAD_MAGNET_BOARD_LINK' with your actual Miro board link. -->
+                    <a href="https://miro.com/app/board/YOUR_LEAD_MAGNET_BOARD_LINK" target="_blank" class="view-button">View Board</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Use AI Section -->
+    <section class="how-we-use-ai-section" id="howWeUseAISection">
+        <div class="container">
+            <h3 class="animate-on-scroll">How We Use AI For Your Business</h3>
+            <div class="ai-content-wrapper animate-on-scroll" data-delay="0.2s">
+                <div class="ai-text-content">
+                    <h4>Leveraging Cutting-Edge AI for Unparalleled Growth</h4>
+                    <p>At Saravium, we don't just talk about AI; we integrate it strategically into every aspect of your client acquisition system. Our advanced AI tools analyze market trends, predict client behavior, and optimize your content for maximum impact. This allows us to deliver highly personalized and effective strategies that traditional methods simply can't match.</p>
+                    <p>From generating initial content drafts and optimizing email subject lines to segmenting your audience for hyper-targeted campaigns, AI empowers us to work faster, smarter, and with greater precision. This means more qualified leads and a higher conversion rate for your coaching business, freeing you to focus on what you do best: coaching your clients to success.</p>
+                </div>
+                <div class="ai-image-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&modestbranding=1&showinfo=0&rel=0" frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faqSection">
+        <div class="container">
+            <h3 class="animate-on-scroll">Frequently Asked Questions</h3>
+            <p class="animate-on-scroll">Here are some common questions about our services.</p>
+
+            <div class="faq-list">
+                <div class="faq-item animate-on-scroll" data-delay="0s">
+                    <h4>Q.1 How much do you charge upfront?</h4>
+                    <div class="faq-answer-content"> <p>We don’t charge a single penny for upfront payment for us. We work purely on a **results-based approach**. Only exception would be if you needed customized client gateways, which may cost around $200 to $500.</p>
                     </div>
-                    <div class="grid-item animate-on-scroll" data-delay="0.1s">
-                        <img src="/Images/funnel.png" alt="Funnels Icon">
-                        <h4>Automated Client Funnels</h4>
-                        <p>Design and implement robust sales funnels that qualify leads and convert prospects into loyal, paying clients 24/7.</p>
+                </div>
+                <div class="faq-item animate-on-scroll" data-delay="0.1s">
+                    <h4>Q.2 Do you have any real world experience?</h4>
+                    <div class="faq-answer-content"> <p>While we're a newer agency in terms of official client history, what we do have is a diverse portfolio of practical application that mirrors real-world results. We have multiple Miro boards showcasing:</p>
+                        <ul>
+                            <li>High-converting email sequences tailored for various fitness and AI coaching niches.</li>
+                            <li>Fully designed sales funnels complete with landing pages, lead magnets, and conversion pathways.</li>
+                            <li>Engaging YouTube scripts optimized for specific calls to action.</li>
+                            <li>Valuable lead magnets/Landing Pages designed to attract and qualify ideal prospects.</li>
+                        </ul>
+                        <p>You can see them in our <a href="#ourWorkSection">Our Work</a> section.</p>
                     </div>
-                    <div class="grid-item animate-on-scroll" data-delay="0.2s">
-                        <img src="/Images/youtube.png" alt="YouTube Icon">
-                        <h4>Engaging YouTube Scripts</h4>
-                        <p>Develop compelling video scripts that capture attention, build authority, and generate inbound leads from YouTube.</p>
+                </div>
+                <div class="faq-item animate-on-scroll" data-delay="0.2s">
+                    <h4>Q.3 What would be my ideal journey if signed up?</h4>
+                    <div class="faq-answer-content"> <p>Even before the call, we will do intensive research about your niche, market, its problems, and resources. We'll learn more about your brand and how it works.</p>
+                        <p>In the call, you’ll tell us how you want to work with us and what your brand voice and tone are. And that’s it! We will then set up everything for you, create emails, lead magnets, funnels, and scripts. All you have to do is check if they are matching your brand voice and ask for unlimited revisions. You will see the growth of your accounts in the first two weeks, and will start getting students from our work in the third.</p>
                     </div>
-                    <div class="grid-item animate-on-scroll" data-delay="0.3s">
-                        <img src="/Images/magnet.png" alt="Lead Magnet Icon">
-                        <h4>High-Converting Lead Magnets</h4>
-                        <p>Create irresistible lead magnets that attract your ideal clients, grow your email list, and establish your expertise.</p>
+                </div>
+                <div class="faq-item animate-on-scroll" data-delay="0.3s">
+                    <h4>Q.4 I'm a busy coach/consultant. How much time will I need to dedicate to this process?</h4>
+                    <div class="faq-answer-content"> <p>In the first week, we may need an hour or two to get a clear understanding of how you want to proceed. After that, we will do all the heavy lifting. All you have to do is check if the content matches your brand voice (which typically takes about 2 minutes).</p>
                     </div>
-                    <div class="grid-item animate-on-scroll" data-delay="0.4s">
-                        <img src="/Images/portal.png" alt="Client Portal Icon">
-                        <h4>Client Portals</h4>
-                        <p>Streamline client communication and resource delivery with professional, easy-to-use client portals.</p>
+                </div>
+                <div class="faq-item animate-on-scroll" data-delay="0.4s">
+                    <h4>Q.5 Do you just set up the system for getting clients?</h4>
+                    <div class="faq-answer-content"> <p>No, we do much more than just set up the system. When we say 'done-for-you,' we mean it comprehensively. We don't just hand you the blueprint; we build the entire client acquisition and retention engine for you, from concept to execution. This includes:</p>
+                        <ul>
+                            <li>Crafting compelling email sequences that nurture leads and convert prospects.</li>
+                            <li>Designing high-converting sales funnels that guide potential clients seamlessly from awareness to enrollment.</li>
+                            <li>Writing engaging YouTube scripts that capture attention and drive action.</li>
+                            <li>Developing valuable lead magnets that attract your ideal audience.</li>
+                            <li>Setting up efficient client portals to streamline your client experience.</li>
+                            <li>Integrating essential team tools to optimize your internal operations.</li>
+                        </ul>
                     </div>
-                    <div class="grid-item animate-on-scroll" data-delay="0.5s">
-                        <img src="/Images/tools.png" alt="Team Tools Icon">
-                        <h4>Team Tool Integration</h4>
-                        <p>You will get clients, but will be able to manage them. We provide help for you and giving tools for you to better communicate with your team.</p>
+                </div>
+                <div class="faq-item animate-on-scroll" data-delay="0.5s">
+                    <h4>Q.6 No one earns from emails anymore?</h4>
+                    <div class="faq-answer-content"> <p>The idea that 'no one earns from emails anymore' is a widespread misconception and demonstrably false. Email marketing remains one of the most powerful and profitable channels for businesses, especially for specialized niches like Fitness and AI coaching.</p>
+                        <ul>
+                            <li><strong>Massive ROI:</strong> Email marketing consistently delivers an average $36 to $42 for every $1 spent, with some US merchants seeing up to $68 back per dollar invested. This is an unmatched return across digital marketing.</li>
+                            <li><strong>Billions of Users:</strong> The number of email users worldwide is projected to hit 4.6 billion in 2025, with over 361 billion emails sent daily in 2024. People are actively in their inboxes.</li>
+                            <li><strong>High Engagement:</strong> A staggering 99% of email users check their inbox daily, with 88% checking multiple times a day. This is a direct line to your audience.</li>
+                            <li><strong>Drives Sales Directly:</strong> Nearly 50% of consumers made a purchase directly from an email in the past year. Automated emails, specifically, drove 37% of all email-generated sales in 2024.</li>
+                            <li><strong>Preferred by Consumers & B2B:</strong> 60% of consumers prefer to be contacted by businesses via email, and 81% of B2B marketers use email newsletters as their main form of content distribution, viewing it as the most efficient way to hook leads.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll" data-delay="0.6s">
+                    <h4>Q.7 AI can just write my emails.</h4>
+                    <div class="faq-answer-content"> <p>While AI is excellent for generating general text and basic personalization, it is not capable of writing truly effective, high-converting sales emails. Sales emails require a nuanced understanding of human psychology, strategic persuasion, and the ability to build desire – something AI simply cannot replicate.</p>
+                        <ul>
+                            <li><strong>Sales Psychology & Persuasion:</strong> AI generates words; it's not capable of understanding the intricate psychological triggers, objection handling, or the art of building genuine desire that are critical for a sales email to close a client. We craft messages that strategically guide prospects to a decision.</li>
+                            <li><strong>Deep Niche-Specific Nuance:</strong> AI cannot grasp the subtle pain points, unique aspirations, or specific language that resonates deeply with Fitness and AI coaching clients. Our human insight ensures your sales emails are precisely targeted and truly compelling to your ideal customer.</li>
+                            <li><strong>Authentic Brand Voice & Connection:</b> Effective sales copy needs to sound like you and build a genuine connection. AI struggles to consistently maintain a unique brand voice and infuse the empathy and storytelling necessary to turn a prospect into a paying client.</li>
+                            <li><strong>Performance-Driven Optimization:</strong> AI doesn't analyze sales results, identify why certain approaches fail, or strategically iterate based on conversion data. We constantly refine your sales emails, learning from real-world performance to maximize your client acquisition.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="calendly-section" id="calendlySection">
-            <div class="container">
-                <h3 class="animate-on-scroll">Schedule Your Free Strategy Session</h3>
-                <p class="animate-on-scroll">Find a time that works for you. Let's discuss your goals and how Saravium can help.</p>
-                <div class="calendly-embed-placeholder animate-on-scroll" data-delay="0.2s" style="max-width:800px; margin: 0 auto; padding: 0; border: none; background-color: transparent;">
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/isfar-saravium/30min?background_color=000000&text_color=ffffff" style="min-width:320px;height:1000px;width:100%;"></div>
-                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                    </div>
-            </div>
-        </section>
-
-        <section class="our-members-section" id="ourMembersSection">
-            <div class="container">
-                <h3 class="animate-on-scroll">Meet The Saravium Team</h3>
-                <div class="members-grid">
-                    <div class="member-card animate-on-scroll" data-delay="0s">
-                        <img src="/Images/isfar zoomed in number 2.png" alt="Isfar - CEO, Copywriter">
-                        <h4>Isfar</h4>
-                        <p>CEO, Copywriter, Funnel Builder</p>
-                        <div class="member-details-extended">
-                            <p>Isfar is the visionary behind Saravium, leading the team with expertise in high-converting copywriting and robust funnel architecture. He ensures every strategy is meticulously crafted to drive your growth and deliver tangible results.</p>
-                        </div>
-                    </div>
-
-                    <div class="member-card animate-on-scroll" data-delay="0.2s">
-                        <img src="/Images/rafi zoomed in.png" alt="Rafi - JavaScript">
-                        <h4>Rafi</h4>
-                        <p>Designer and Developer</p>
-                        <div class="member-details-extended">
-                            <p>Rafi designs our emails and landing pages. He builds pages that work and look good. When something needs fixing, he sticks with it until it's done right. Handles both the design and development side of our projects. Shows up consistently and gets the work finished.</p>
-                        </div>
-                    </div>
-                    <div class="member-card animate-on-scroll" data-delay="0.3s">
-                        <img src="/Images/mihran wedding picture" alt="Mihran - Prospecting">
-                        <h4>Mihran</h4>
-                        <p>Scripting Writer and Prospecting Specialist</p>
-                        <div class="member-details-extended">
-                            <p>Mihran excels at identifying and engaging high-quality leads. He also writes engaging youtube scripts focusing on lead generation.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="our-work-section" id="ourWorkSection">
-            <div class="container">
-                <h3 class="animate-on-scroll">See Our Work in Action</h3>
-                <p class="animate-on-scroll">Explore personalized value examples and proven strategies on our Miro Boards.</p>
-                <div class="work-grid">
-                    <div class="work-item animate-on-scroll" data-delay="0s">
-                        <img src="https://placehold.co/300x200/2A2A2A/00C6FF?text=Email+Examples" alt="Email Marketing Work">
-                        <h4>High-Converting Email Sequences</h4>
-                        <a href="https://miro.com/app/board/YOUR_EMAIL_BOARD_LINK" target="_blank" class="view-button">View Board</a>
-                    </div>
-                    <div class="work-item animate-on-scroll" data-delay="0.1s">
-                        <img src="https://placehold.co/300x200/2A2A2A/00C6FF?text=Landing+Page+Designs" alt="Landing Page Designs">
-                        <h4>Engaging Landing Page Designs</h4>
-                        <a href="https://miro.com/app/board/YOUR_LANDING_PAGE_BOARD" target="_blank" class="view-button">View Board</a>
-                    </div>
-                    <div class="work-item animate-on-scroll" data-delay="0.2s">
-                        <img src="https://placehold.co/300x200/2A2A2A/00C6FF?text=YouTube+Scripts" alt="YouTube Script Work">
-                        <h4>Authority-Building YouTube Scripts</h4>
-                        <a href="https://miro.com/app/board/YOUR_YOUTUBE_BOARD_LINK" target="_blank" class="view-button">View Board</a>
-                    </div>
-                    <div class="work-item animate-on-scroll" data-delay="0.3s">
-                        <img src="https://placehold.co/300x200/2A2A2A/00C6FF?text=Lead+Magnet+Samples" alt="Lead Magnet Samples">
-                        <h4>Irresistible Lead Magnet Examples</h4>
-                        <a href="https://miro.com/app/board/YOUR_LEAD_MAGNET_BOARD_LINK" target="_blank" class="view-button">View Board</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="how-we-use-ai-section" id="howWeUseAISection">
-            <div class="container">
-                <h3 class="animate-on-scroll">How We Use AI For Your Business</h3>
-                <div class="ai-content-wrapper animate-on-scroll" data-delay="0.2s">
-                    <div class="ai-text-content">
-                        <h4>Leveraging Cutting-Edge AI for Unparalleled Growth</h4>
-                        <p>At Saravium, we don't just talk about AI; we integrate it strategically into every aspect of your client acquisition system. Our advanced AI tools analyze market trends, predict client behavior, and optimize your content for maximum impact. This allows us to deliver highly personalized and effective strategies that traditional methods simply can't match.</p>
-                        <p>From generating initial content drafts and optimizing email subject lines to segmenting your audience for hyper-targeted campaigns, AI empowers us to work faster, smarter, and with greater precision. This means more qualified leads and a higher conversion rate for your coaching business, freeing you to focus on what you do best: coaching your clients to success.</p>
-                    </div>
-                    <div class="ai-image-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&modestbranding=1&showinfo=0&rel=0" frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="faq-section" id="faqSection">
-            <div class="container">
-                <h3 class="animate-on-scroll">Frequently Asked Questions</h3>
-                <p class="animate-on-scroll">Here are some common questions about our services.</p>
-
-                <div class="faq-list">
-                    <div class="faq-item animate-on-scroll" data-delay="0s">
-                        <h4>Q.1 How much do you charge upfront?</h4>
-                        <div class="faq-answer-content"> <p>We don’t charge a single penny for upfront payment for us. We work purely on a **results-based approach**. Only exception would be if you needed customized client gateways, which may cost around $200 to $500.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item animate-on-scroll" data-delay="0.1s">
-                        <h4>Q.2 Do you have any real world experience?</h4>
-                        <div class="faq-answer-content"> <p>While we're a newer agency in terms of official client history, what we do have is a diverse portfolio of practical application that mirrors real-world results. We have multiple Miro boards showcasing:</p>
-                            <ul>
-                                <li>High-converting email sequences tailored for various fitness and AI coaching niches.</li>
-                                <li>Fully designed sales funnels complete with landing pages, lead magnets, and conversion pathways.</li>
-                                <li>Engaging YouTube scripts optimized for specific calls to action.</li>
-                                <li>Valuable lead magnets/Landing Pages designed to attract and qualify ideal prospects.</li>
-                            </ul>
-                            <p>You can see them in our <a href="#ourWorkSection">Our Work</a> section.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item animate-on-scroll" data-delay="0.2s">
-                        <h4>Q.3 What would be my ideal journey if signed up?</h4>
-                        <div class="faq-answer-content"> <p>Even before the call, we will do intensive research about your niche, market, its problems, and resources. We'll learn more about your brand and how it works.</p>
-                            <p>In the call, you’ll tell us how you want to work with us and what your brand voice and tone are. And that’s it! We will then set up everything for you, create emails, lead magnets, funnels, and scripts. All you have to do is check if they are matching your brand voice and ask for unlimited revisions. You will see the growth of your accounts in the first two weeks, and will start getting students from our work in the third.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item animate-on-scroll" data-delay="0.3s">
-                        <h4>Q.4 I'm a busy coach/consultant. How much time will I need to dedicate to this process?</h4>
-                        <div class="faq-answer-content"> <p>In the first week, we may need an hour or two to get a clear understanding of how you want to proceed. After that, we will do all the heavy lifting. All you have to do is check if the content matches your brand voice (which typically takes about 2 minutes).</p>
-                        </div>
-                    </div>
-                    <div class="faq-item animate-on-scroll" data-delay="0.4s">
-                        <h4>Q.5 Do you just set up the system for getting clients?</h4>
-                        <div class="faq-answer-content"> <p>No, we do much more than just set up the system. When we say 'done-for-you,' we mean it comprehensively. We don't just hand you the blueprint; we build the entire client acquisition and retention engine for you, from concept to execution. This includes:</p>
-                            <ul>
-                                <li>Crafting compelling email sequences that nurture leads and convert prospects.</li>
-                                <li>Designing high-converting sales funnels that guide potential clients seamlessly from awareness to enrollment.</li>
-                                <li>Writing engaging YouTube scripts that capture attention and drive action.</li>
-                                <li>Developing valuable lead magnets that attract your ideal audience.</li>
-                                <li>Setting up efficient client portals to streamline your client experience.</li>
-                                <li>Integrating essential team tools to optimize your internal operations.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="faq-item animate-on-scroll" data-delay="0.5s">
-                        <h4>Q.6 No one earns from emails anymore?</h4>
-                        <div class="faq-answer-content"> <p>The idea that 'no one earns from emails anymore' is a widespread misconception and demonstrably false. Email marketing remains one of the most powerful and profitable channels for businesses, especially for specialized niches like Fitness and AI coaching.</p>
-                            <ul>
-                                <li><strong>Massive ROI:</strong> Email marketing consistently delivers an average $36 to $42 for every $1 spent, with some US merchants seeing up to $68 back per dollar invested. This is an unmatched return across digital marketing.</li>
-                                <li><strong>Billions of Users:</strong> The number of email users worldwide is projected to hit 4.6 billion in 2025, with over 361 billion emails sent daily in 2024. People are actively in their inboxes.</li>
-                                <li><strong>High Engagement:</strong> A staggering 99% of email users check their inbox daily, with 88% checking multiple times a day. This is a direct line to your audience.</li>
-                                <li><strong>Drives Sales Directly:</strong> Nearly 50% of consumers made a purchase directly from an email in the past year. Automated emails, specifically, drove 37% of all email-generated sales in 2024.</li>
-                                <li><strong>Preferred by Consumers & B2B:</strong> 60% of consumers prefer to be contacted by businesses via email, and 81% of B2B marketers use email newsletters as their main form of content distribution, viewing it as the most efficient way to hook leads.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="faq-item animate-on-scroll" data-delay="0.6s">
-                        <h4>Q.7 AI can just write my emails.</h4>
-                        <div class="faq-answer-content"> <p>While AI is excellent for generating general text and basic personalization, it is not capable of writing truly effective, high-converting sales emails. Sales emails require a nuanced understanding of human psychology, strategic persuasion, and the ability to build desire – something AI simply cannot replicate.</p>
-                            <ul>
-                                <li><strong>Sales Psychology & Persuasion:</strong> AI generates words; it's not capable of understanding the intricate psychological triggers, objection handling, or the art of building genuine desire that are critical for a sales email to close a client. We craft messages that strategically guide prospects to a decision.</li>
-                                <li><strong>Deep Niche-Specific Nuance:</strong> AI cannot grasp the subtle pain points, unique aspirations, or specific language that resonates deeply with Fitness and AI coaching clients. Our human insight ensures your sales emails are precisely targeted and truly compelling to your ideal customer.</li>
-                                <li><li><strong>Authentic Brand Voice & Connection:</b> Effective sales copy needs to sound like you and build a genuine connection. AI struggles to consistently maintain a unique brand voice and infuse the empathy and storytelling necessary to turn a prospect into a paying client.</li>
-                                <li><strong>Performance-Driven Optimization:</strong> AI doesn't analyze sales results, identify why certain approaches fail, or strategically iterate based on conversion data. We constantly refine your sales emails, learning from real-world performance to maximize your client acquisition.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
@@ -255,6 +288,7 @@
                 <a href="https://instagram.com/your_saravium_instagram" target="_blank" aria-label="Instagram">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram">
                 </a>
+                
                 <a href="https://twitter.com/your_saravium_twitter" target="_blank" aria-label="Twitter">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" alt="Twitter">
                 </a>
@@ -274,8 +308,9 @@
                     const targetElement = document.querySelector(targetId);
 
                     if (targetElement) {
+                        // Calculate offset from the top, considering the sticky header wrapper
                         const topSectionWrapper = document.querySelector('.top-section-wrapper');
-                        const offset = topSectionWrapper.offsetHeight + parseInt(getComputedStyle(topSectionWrapper).paddingTop) + parseInt(getComputedStyle(topSectionWrapper).paddingBottom) + 10;
+                        const offset = topSectionWrapper.offsetHeight + parseInt(getComputedStyle(topSectionWrapper).paddingTop) + parseInt(getComputedStyle(topSectionWrapper).paddingBottom) + 10; 
 
                         const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                         const offsetPosition = elementPosition - offset;

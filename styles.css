@@ -61,52 +61,57 @@ a:hover {
     color: var(--color-darker-electric-blue);
 }
 
-/* Header Wrapper: Sticky header container */
+/* Header Wrapper for Logo and Nav */
 .top-section-wrapper {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: var(--color-primary-bg);
-    padding: 2px 0; /* Thinner header */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    border-radius: 0;
-    width: 100%;
+    background-color: var(--color-primary-bg); /* Background for the whole sticky bar */
+    padding: 0; /* Removed vertical padding */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Subtle shadow for the whole bar */
 }
 
 .top-section-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pushes logo left, nav right */
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Match container width */
+    margin: 0 auto; /* Center content within wrapper */
     padding: 0 20px; /* Consistent padding for header content */
 }
 
 /* Header Logo Styling */
 .header-logo img {
-    height: 105px;
+    height: 120px; /* Increased height to make the logo larger */
     width: auto;
+    /* Removed filter: brightness(0) invert(1); to display original colors */
 }
 
-/* Main Header Navigation: Button-like element */
-.main-header-nav {
+/* --- MAIN NAVIGATION STYLES (DEFAULT - DESKTOP FIRST) --- */
+.main-header-nav { /* This will be the blue cylinder for nav links only */
     background-image: linear-gradient(to right, var(--color-electric-blue), var(--color-darker-electric-blue));
-    padding: 8px 25px;
-    border-radius: 50px;
+    padding: 8px 25px; /* Vertical padding 8px, horizontal 25px */
+    border-radius: 25px; /* Half of the height (8px top + 8px bottom + ~34px content height = 50px total height, so 25px radius) */
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    height: auto;
-    display: flex;
+    height: 50px; /* Fixed height for the "cylinder" shape */
+    display: flex; /* To center nav items vertically */
     align-items: center;
+    width: fit-content; /* Only take width of content */
     flex-shrink: 0;
-    width: fit-content;
 }
 
-.main-nav ul {
-    list-style: none;
+.main-nav ul { /* Target the ul inside the new cylinder */
+    list-style: none !important; /* IMPORTANT: Force no bullets */
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 25px;
+    display: flex; /* HORIZONTAL LAYOUT FOR DESKTOP */
+    flex-direction: row; /* Explicitly horizontal for desktop */
+    gap: 25px; /* Spacing between links on desktop */
+}
+
+.main-nav ul li {
+    list-style: none !important; /* IMPORTANT: Force no bullets on list items */
+    text-align: left; /* Default text alignment */
 }
 
 .main-nav ul li a {
@@ -115,6 +120,8 @@ a:hover {
     font-size: 1em;
     padding: 2px 0;
     position: relative;
+    white-space: nowrap; /* Keep links on a single line on desktop */
+    display: inline-block; /* Ensures padding and width work as expected */
 }
 
 .main-nav ul li a:hover {
@@ -135,6 +142,8 @@ a:hover {
 .main-nav ul li a:hover::after {
     width: 100%;
 }
+/* --- END MAIN NAVIGATION DESKTOP STYLES --- */
+
 
 /* ANIMATION KEYFRAMES */
 @keyframes fadeInUp {
@@ -194,7 +203,8 @@ a:hover {
     background-color: transparent;
     border-bottom: none;
     margin-top: 0;
-    padding-top: calc(35px + 10px + 15px); /* Adjusted top padding */
+    /* Adjusted top padding to bring headline higher, considering the smaller logo */
+    padding-top: 40px; 
 }
 
 .hero-section h1 {
@@ -436,26 +446,6 @@ a:hover {
 
 .member-card.animate-on-scroll {
     transition-delay: var(--delay);
-}
-
-/* New styles for extended member details - ONLY THIS CARD'S DETAILS EXPAND ON HOVER */
-.member-details-extended {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-    width: 100%;
-    text-align: left;
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid var(--color-border-dark);
-    color: var(--color-muted-text);
-    font-size: 0.9em;
-}
-
-.member-card:hover .member-details-extended {
-    max-height: 200px; /* Sufficient height to show content without scroll */
-    opacity: 1;
 }
 
 /* Our Work Section Styling */
@@ -729,24 +719,41 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    .top-section-wrapper {
+        position: static; /* Remove sticky on mobile */
+        padding: 15px 0; /* Adjust padding for mobile */
+    }
     .top-section-content {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px; /* Adjusted padding for mobile */
+        flex-direction: column; /* Stack logo and nav vertically */
+        align-items: center; /* Center items when stacked */
+        padding: 0 20px;
     }
     .header-logo {
-        margin-bottom: 15px;
+        margin-bottom: 15px; /* Add space below logo when stacked */
     }
-    .main-header-nav {
-        width: 100%;
-        border-radius: 10px;
-        height: auto;
-        padding: 15px 20px;
+    .main-header-nav { /* Target the new cylinder class */
+        width: 100%; /* Take full width on mobile */
+        border-radius: 10px; /* Adjust border-radius for mobile */
+        height: auto; /* Allow height to adjust for stacked content */
+        padding: 15px 20px; /* Adjusted padding for stacked nav */
+        flex-shrink: 1;
+        min-width: 0;
     }
-    .main-nav ul {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
+    .main-nav ul { /* Target the ul inside the new cylinder */
+        flex-direction: column; /* VERTICAL STACK ON MOBILE */
+        gap: 15px; /* Adjusted gap for vertical stacking */
+        width: 100%; /* Ensure the ul takes full width inside its parent */
+        padding: 0; /* Remove default list padding */
+        align-items: center; /* Center the stacked links */
+    }
+    .main-nav ul li {
+        width: 100%; /* Make each list item take full width for stacking */
+        text-align: center; /* Center the text in each stacked item */
+    }
+    .main-nav ul li a {
+        white-space: normal; /* Allow text to wrap within the link on mobile */
+        display: block; /* Make the link a block element to take full width and respect text-align */
+        padding: 5px 0; /* Add some vertical padding for clickable area */
     }
     .hero-section {
         padding-top: 20px;
@@ -770,44 +777,46 @@ a:hover {
         font-size: 1em;
     }
     .cta-button-container {
-        padding: 20px 20px 0; /* Adjusted padding for mobile */
+        padding: 20px 20px 0;
     }
     .how-we-work-section, .calendly-section, .our-members-section, .our-work-section, .faq-section, .how-we-use-ai-section {
-        padding: 40px 20px; /* Adjusted padding for mobile */
+        padding: 40px 15px; /* Adjust padding for mobile */
     }
     .work-grid {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 20px; /* Slightly smaller gap on mobile */
     }
     .work-item {
-        width: calc(50% - 10px);
+        width: calc(50% - 10px); /* Two columns with small gap */
         min-width: 150px;
     }
     .members-grid {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 20px; /* Slightly smaller gap on mobile */
         overflow-x: hidden;
     }
     .member-card {
-        width: calc(50% - 10px);
+        width: calc(50% - 10px); /* Two columns with small gap */
         min-width: 150px;
     }
+
     .ai-content-wrapper {
-        flex-direction: column;
+        flex-direction: column; /* Stack content vertically on mobile */
         text-align: center;
     }
+
     .ai-image-container {
-        width: 100%;
+        width: 100%; /* Full width for image on mobile */
         margin-top: 20px;
-        padding-bottom: 56.25%;
+        padding-bottom: 56.25%; /* Standard 16:9 for mobile */
     }
 }
 
 @media (max-width: 480px) {
     .work-item,
     .member-card {
-        width: 100%;
+        width: 100%; /* Single column on very small screens */
     }
 }
